@@ -1,0 +1,26 @@
+# Azure DevOps Test Case Generator - Requirements
+# Production-ready dependencies for Master's dissertation project
+
+# Core HTTP client with retry support
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Data validation and settings management
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+python-dotenv>=1.0.0
+
+# Type hints support (Python 3.10+)
+typing-extensions>=4.8.0
+
+# YAML parsing for templates
+pyyaml>=6.0.0
+
+# Testing framework
+pytest>=7.4.0
+
+# Hybrid mode dependencies (optional)
+sentence-transformers>=2.2.0
+scikit-learn>=1.3.0
+numpy>=1.24.0
+rapidfuzz>=3.0.0

@@ -1,0 +1,272 @@
+# Test Case Generation Templates
+# Rule-based templates for generating test cases from Acceptance Criteria
+# Each template defines: category, subcategory, short_descriptor, requires, and steps
+
+templates:
+  # Availability/Entry Points
+  - category: "Availability/Entry Points"
+    subcategory: "Visibility"
+    short_descriptor: "Element visibility display"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature area where the element should be visible."
+        expected: "Feature area is displayed."
+      - action: "Verify the element described in the acceptance criterion is visible and accessible."
+        expected: "Element is displayed correctly and can be accessed by the user."
+
+  - category: "Availability/Entry Points"
+    subcategory: "Menu Entry"
+    short_descriptor: "Menu entry point presence"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Open the menu where the entry point should be located."
+        expected: "Menu opens and displays available options."
+      - action: "Verify the entry point is present in the menu."
+        expected: "Entry point is visible in the menu and can be selected."
+
+  - category: "Availability/Entry Points"
+    subcategory: "Panel Display"
+    short_descriptor: "Panel visibility display"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the area where the panel should be displayed."
+        expected: "Application area is displayed."
+      - action: "Verify the panel is visible and properly positioned."
+        expected: "Panel is displayed correctly with all expected elements visible."
+
+  # Logging/Tracking
+  - category: "Logging/Tracking"
+    subcategory: "Data Logging"
+    short_descriptor: "Action logging entry"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature that performs logging."
+        expected: "Feature interface is displayed."
+      - action: "Perform an action that should be logged according to the acceptance criterion."
+        expected: "Action completes successfully."
+      - action: "Verify the action is recorded in the log or tracking system."
+        expected: "New log entry appears with correct information and timestamp."
+
+  - category: "Logging/Tracking"
+    subcategory: "History Logging"
+    short_descriptor: "History entry addition"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the history or log view."
+        expected: "History view is displayed."
+      - action: "Perform an action that should be added to history."
+        expected: "Action completes successfully."
+      - action: "Verify the new entry appears in the history list."
+        expected: "History list updates to show the new entry with correct details."
+
+  - category: "Logging/Tracking"
+    subcategory: "List Update"
+    short_descriptor: "List update behavior"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the list view."
+        expected: "List is displayed with current items."
+      - action: "Perform an action that should update the list according to the acceptance criterion."
+        expected: "Action completes successfully."
+      - action: "Verify the list updates to reflect the change."
+        expected: "List refreshes and displays the updated information correctly."
+
+  # Ordering
+  - category: "Ordering"
+    subcategory: "Newest First"
+    short_descriptor: "Newest first ordering"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the list or view that displays ordered items."
+        expected: "List is displayed."
+      - action: "Perform two actions that create new entries, with a time gap between them."
+        expected: "Both actions complete successfully and create entries."
+      - action: "Verify the newest entry appears at the top of the list."
+        expected: "List is ordered with the most recent entry first, followed by older entries."
+
+  - category: "Ordering"
+    subcategory: "Chronological"
+    short_descriptor: "Chronological ordering"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the chronological view."
+        expected: "Chronological view is displayed."
+      - action: "Verify items are displayed in chronological order according to the acceptance criterion."
+        expected: "Items are ordered correctly from oldest to newest (or newest to oldest) based on timestamps."
+
+  # Limit/Retention
+  - category: "Limit/Retention"
+    subcategory: "Last Five Retention"
+    short_descriptor: "Last five retention limit"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature that maintains a limited list."
+        expected: "Feature interface is displayed."
+      - action: "Perform six actions that should each add an entry to the list."
+        expected: "All six actions complete successfully."
+      - action: "Verify only the last five entries are retained in the list."
+        expected: "List contains exactly five entries, showing the most recent five, with the oldest entry removed."
+
+  - category: "Limit/Retention"
+    subcategory: "Maximum Limit"
+    short_descriptor: "Maximum limit enforcement"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature with a maximum limit."
+        expected: "Feature interface is displayed."
+      - action: "Add items until the maximum limit is reached."
+        expected: "Items are added successfully up to the limit."
+      - action: "Attempt to add one more item beyond the limit."
+        expected: "System prevents adding the item and displays appropriate message or disables the add action."
+
+  # Restrictions/Scope
+  - category: "Restrictions/Scope"
+    subcategory: "Access Restriction"
+    short_descriptor: "Access restriction enforcement"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the restricted element or feature."
+        expected: "Element or feature area is displayed."
+      - action: "Attempt to perform the restricted action described in the acceptance criterion."
+        expected: "System prevents the action and does not allow the restricted operation."
+      - action: "Verify the element remains in its original state with no changes applied."
+        expected: "No changes are made and the system state is unchanged."
+
+  - category: "Restrictions/Scope"
+    subcategory: "Read-Only Restriction"
+    short_descriptor: "Read-only restriction"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the read-only element or field."
+        expected: "Element is displayed."
+      - action: "Attempt to edit or modify the read-only element."
+        expected: "System prevents editing and the element remains read-only."
+      - action: "Verify the element displays content but cannot be modified."
+        expected: "Element is visible and displays information but editing controls are disabled or unavailable."
+
+  # Dynamic Refresh
+  - category: "Dynamic Refresh"
+    subcategory: "Auto Refresh"
+    short_descriptor: "Automatic refresh behavior"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the view that should auto-refresh."
+        expected: "View is displayed with current data."
+      - action: "Trigger an external change that should cause the view to update."
+        expected: "External change occurs successfully."
+      - action: "Verify the view updates automatically without manual refresh."
+        expected: "View refreshes automatically and displays the updated information without requiring user action."
+
+  - category: "Dynamic Refresh"
+    subcategory: "Real-Time Update"
+    short_descriptor: "Real-time update behavior"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the real-time view."
+        expected: "Real-time view is displayed."
+      - action: "Trigger a change in the underlying data."
+        expected: "Data change occurs."
+      - action: "Verify the view updates immediately in real-time."
+        expected: "View updates instantly to reflect the change with no noticeable delay."
+
+  # Reset Conditions
+  - category: "Reset Conditions"
+    subcategory: "State Reset"
+    short_descriptor: "State reset behavior"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature and perform actions that modify state."
+        expected: "State is modified successfully."
+      - action: "Trigger the reset condition described in the acceptance criterion (e.g., create new drawing, load new file)."
+        expected: "Reset condition is triggered successfully."
+      - action: "Verify the state resets to initial or default values."
+        expected: "State is reset correctly and all modified values return to their initial state."
+
+  # Scrolling
+  - category: "Scrolling"
+    subcategory: "Scroll Behavior"
+    short_descriptor: "Scroll behavior display"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the list or view that should be scrollable."
+        expected: "List or view is displayed."
+      - action: "Add enough items to exceed the visible height of the container."
+        expected: "Items are added and list grows beyond visible area."
+      - action: "Verify scrolling is available and functional."
+        expected: "Scrollbar appears (or touch scrolling works) and user can scroll to view all items in the list."
+
+  # Accessibility
+  - category: "Accessibility"
+    subcategory: "Keyboard Navigation"
+    short_descriptor: "Keyboard navigation accessibility"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature using keyboard only (Tab, Enter, Arrow keys)."
+        expected: "Feature is accessible via keyboard navigation."
+      - action: "Verify all interactive elements can be reached and activated using keyboard."
+        expected: "All elements are keyboard accessible and can be activated without mouse."
+      - action: "Verify focus indicators are clearly visible for all focusable elements."
+        expected: "Focus indicators meet WCAG 2.1 AA contrast requirements and are clearly visible."
+      - action: "Perform the action described in the acceptance criterion using keyboard only."
+        expected: "Action completes successfully using keyboard navigation."
+
+  - category: "Accessibility"
+    subcategory: "Accessibility"
+    short_descriptor: "Accessibility compliance"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature area."
+        expected: "Feature interface is displayed."
+      - action: "Verify all elements have readable labels and proper ARIA attributes."
+        expected: "All elements have accessible labels and can be read by screen readers."
+      - action: "Verify keyboard navigation works for all interactive elements."
+        expected: "All elements are keyboard accessible with proper focus management."
+
+  # Other/General (fallback)
+  - category: "Other/General"
+    subcategory: "General"
+    short_descriptor: "General functionality"
+    requires: []
+    steps:
+      - action: "Launch the application."
+        expected: "Application launches successfully and main window is displayed."
+      - action: "Navigate to the feature related to the acceptance criterion."
+        expected: "Feature interface is displayed and accessible."
+      - action: "Perform the action described in the acceptance criterion."
+        expected: "Action completes successfully and the expected behavior occurs as specified."
